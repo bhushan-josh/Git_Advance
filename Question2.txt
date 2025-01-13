@@ -1,0 +1,6 @@
+Q2: What does the git `ls-files` command do, and what information does its output provide regarding the state of files in a Git repository?
+
+A:The git ls-files command in Git lists the files that are currently tracked by Git. It shows the files that are staged, modified, or unmodified in your working directory, depending on the options you use with the command.
+
+
+

@@ -1,0 +1,9 @@
+Q3: Under what conditions will Git consider a file that has been deleted as being renamed, and what criteria does Git use to determine that a new file is a renamed version of the deleted file?
+
+A: Git considers a deleted file as being renamed if a new file with matching content
+is added to the staging area. In this case, the file extension is doesnt matter as
+long as the content of the files matches.
+To be considered a rename, the content of the new file must match at least 50% of the deleted file's content. If the similarity is below this threshold, Git will treat the new file as a newly added file, and the deleted file will be considered removed file.
+
+
+ 
