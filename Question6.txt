@@ -1,5 +1,16 @@
 Q. How to set multiple remote repositories for the same project? Explain the use case. you should have a working demo of it.
 
-A : git remote add <name><url>
+A : We can set multiple remote by using below command.
+git remote add <remote-name> <remote-url>
 
-use case 
+For example:
+
+git remote add origin https://github.com/bhushan-josh/git_advance.git
+
+git remote add git_lab https://gitlab.com/josh1395103/Multi_Repo.git
+
+git remote -v
+
+Use case:
+1) Backup: If one remote is unavailable, we have a complete mirror of the repository on different platform.
+2) Collaboration: Some collaborators might prefer different platforms.
