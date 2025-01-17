@@ -1,0 +1,15 @@
+Q1: What happens when a file is deleted in the main branch and updated in a feature branch, and how is this handled during a merge?
+
+A:If a file is deleted in the main branch and updated in the feature branch, 
+a conflict will occur during the merge once the changes are committed. However,
+the conflict won't affect the merge until the changes are committed. To resolve 
+the issue, the necessary adjustments should be made in the feature branch, and 
+then it can be merged into the main branch, resolving the conflict.
+
+1- To keep the file
+	If we want to keep the file with changes then add the file then commit 
+	git add <file_name>
+  
+2 - To delete the file 
+	If want to remove file like main branch remove by using command
+	git rm <file_name>

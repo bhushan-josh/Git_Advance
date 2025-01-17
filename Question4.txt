@@ -1,0 +1,13 @@
+Q4: Why is it not possible to create two branches with the names `fix` and `fix/bug` in a Git repository, and what causes this conflict?
+
+A: It's not possible to create two branches with the names `fix` and `fix/bug` in a Git repository because Git treats branch names as hierachical namespace similar to hierarchical directories.
+Git stores branch references as files in the `.git/refs/heads` directory.
+If we create a branch `fix` its stored as `.git/refs/heads/fix`.
+A branch with name `fix/bug` would create a conflict because `fix` is already a file in above case and its cannot be a directory in this case simultaneously.
+
+Example:
+
+for branch `fix` branch reference is -> `.git/refs/heads/fix`
+for branch `fix/bug` branch reference would be -> `.git/refs/heads/fix/bug`
+
+here, `fix` is file in case1 and it becomes directory in case2, which is not possible at the same time.
